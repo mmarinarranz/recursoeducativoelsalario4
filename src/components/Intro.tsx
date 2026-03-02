@@ -69,18 +69,6 @@ export function Intro({ onStart }: { onStart: () => void }) {
           <ChevronRight className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" />
         </button>
 
-        <button 
-          onClick={handleDownload}
-          disabled={isDownloading}
-          className="w-full flex items-center justify-center gap-3 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold text-sm py-3 px-8 rounded-xl transition-all duration-200 disabled:opacity-50"
-        >
-          {isDownloading ? (
-            <Loader2 className="w-5 h-5 animate-spin" />
-          ) : (
-            <Download className="w-5 h-5" />
-          )}
-          <span>{isDownloading ? 'GENERANDO ARCHIVO...' : 'DESCARGAR JUEGO (HTML ÚNICO)'}</span>
-        </button>
       </div>
     </motion.div>
   );
